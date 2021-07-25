@@ -4,6 +4,7 @@
 	<title>Email</title>
 </head>
 <body>
+	<h1 id="head1">Submit the form</h1>
   <form>
   	Email <br> <input id="email" type="email" name="Email" value=""> 
   	<br>
@@ -17,7 +18,7 @@
 			let email = document.getElementById('email').value;
 
 			if(email != ''){
-				document.getElementById('head1').innerHTML = name;
+				document.getElementById('head1').innerHTML = email;
 			}else{
 				alert('null value');
 			}
