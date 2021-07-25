@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email</title>
+</head>
+<body>
+  <form>
+  	Email <br> <input id="email" type="email" name="Email" value=""> 
+  	<br>
+    <input onclick="getEmail()" type="Submit" name="btn" value="submit">
+  </form>
+
+  <script>
+		"use strict"
+
+		function getEmail(){
+			let email = document.getElementById('email').value;
+
+			if(email != ''){
+				document.getElementById('head1').innerHTML = name;
+			}else{
+				alert('null value');
+			}
+		}
+	</script>
+
+</body>
+</html>
