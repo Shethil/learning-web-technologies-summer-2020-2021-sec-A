@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name</title>
+</head>
+<body>
+	<h1 id="head1">Submit the form</h1>
+  <form>
+  	Name <br> <input id="name" type="text" name="name" value=""> 
+  	<br>
+    <input onclick="getName()" type="submit" name="btn" value="submit">
+  </form>
+
+
+  <script>
+		"use strict"
+
+		function getName(){
+			let name = document.getElementById('name').value;
+
+			if(name != ''){
+				document.getElementById('head1').innerHTML = name;
+			}else{
+				alert('null value');
+			}
+		}
+	</script>
+
+
+</body>
+</html>

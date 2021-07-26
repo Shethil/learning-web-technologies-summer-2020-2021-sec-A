@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Degree</title>
+</head>
+<body>
+	
+	<form name="form" onsubmit="return(getDegree());">
+		<fieldset> 
+            <legend>Degree</legend>
+            <input type="checkbox" name="degree" value="SSC"> SSC
+			<input type="checkbox" name="degree" value="HSC"> HSC
+			<input type="checkbox" name="degree" value="BSc"> BSc
+        </fieldset>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+	</form>
+	<h1 id="head1"></h1>
+	<script>
+function validate(){
+			let degree = document.forms["form"]["degree"].value;
+
+			if(degree != ''){
+				document.getElementById('head1').innerHTML = degree;
+			}
+            else{
+                alert("Select one");
+            }
+		}
+	</script>
+</body>
+</html>

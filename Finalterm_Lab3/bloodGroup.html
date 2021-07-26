@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bloud Group</title>
+</head>
+<body>
+	
+	<form name="form" onsubmit="return(getBD());">
+		<fieldset>
+            Blood Group
+            <select name="bloodGroup" >
+				<option value="A+">A+</option>
+				<option value="A-">A-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+			</select>
+			<hr>
+        </fieldset>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+	</form>
+	<h1 id="head1"></h1>
+	<script>
+function getBD(){
+			let bloodGroup = document.forms["form"]["bloodGroup"].value;
+
+			if(degree != ''){
+				document.getElementById('head1').innerHTML = bloodGroup;
+			}
+            else{
+                alert("select One ");
+				return false;
+            }
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Picture</title>
+</head>
+<body>
+	
+<form name="form" onsubmit="return(getProfilepic());">
+		<fieldset>
+            <legend>Profile Picture</legend>
+            User Id
+			<input type="text" name="id" value=""> <br><br>
+			Picture
+			<input type="file" name="myPicture" value=""><hr>
+			<input type="submit" name="submit" value="Submit">
+		</fieldset>
+	</form>
+	<h1 id="head1"></h1>
+	<script>
+        function getProfilepic(){
+			let x = document.forms["form"]["id"].value;
+			let id = parseInt(x);
+			let myFile = x = document.forms["myForm"]["myPicture"].value;
+			
+			if(id != "" && !(id > 0)){
+				alert("UserId cannot be empty and has tobe a positive numbe");
+				return false;
+			}
+			if(myFile == ""){
+				alert("Select a picture.");
+				return false;
+			}			
+		}
+	</script>
+</body>
+</html>

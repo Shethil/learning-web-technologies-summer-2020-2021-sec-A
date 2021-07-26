@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date of Birth</title>
+</head>
+<body>
+	
+	<h1 id="head1">Submit the form</h1>
+
+	<fieldset>
+		<legend>Date of Birth</legend>
+	  <form>
+	  	     <input id="dob" type="date" name="dob" value="">
+	  	<br>
+	  	<hr>
+	    <input onclick="getDOB()" type="submit" name="btn" value="submit">
+	  </form>
+  </ fieldset>
+
+  <script>
+		"use strict"
+
+		function getDOB(){
+			let dob = document.getElementById('dob').value;
+
+			if(dob != ''){
+				document.getElementById('head1').innerHTML = dob;
+			}else{
+				alert('null value');
+			}
+		}
+	</script>
+
+</body>
+</html>
