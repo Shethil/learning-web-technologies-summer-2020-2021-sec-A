@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+</head>
+<body >
+	 <table border="1" >
+     	<tr>
+     		<td colspan="2" align="center">Personal Profile</td>
+     	</tr>
+
+     	<tr>
+     		<td>Name</td>
+     		<td><input id="name" type="text" name="name" value=""> </td>
+     	</tr>
+
+     	<tr>
+     		<td>Email</td>
+     		<td><input id="email" type="email" name="Email" value=""> </td>
+     	</tr>
+
+     	<tr>
+     		<td>Gender</td>
+     		<td> 
+     		 <input id="gender" type="radio" name="gender" value=""> Male
+			 <input id="gender" type="radio" name="gender" value=""> Female
+			 <input id="gender" type="radio" name="gender" value=""> Other 
+			</td>
+     	</tr>
+
+     	<tr>
+     		<td>Date of Birth</td>
+     		<td> <input d="dob" type="date" name="dob"> </td>
+     	</tr>
+
+     	<tr>
+     		<td>Blood Group</td>
+     		<td><select name="bg">
+			    <option id="bg" value="A+">A+</option>
+				<option id="bg" value="A-">A-</option>
+				<option id="bg" value="B+">B+</option>
+				<option id="bg" value="B-">B-</option>
+				<option id="bg" value="O+">O+</option>
+				<option id="bg" value="O-">O-</option>
+				<option id="bg" value="AB+">AB+</option>
+				<option id="bg" value="AB-">AB-</option>
+     	</tr>
+
+     	<tr>
+     		<td>Degree</td>
+     		<td>
+     		 <input id="degree" type="checkbox" name="SSC" value=""> SSC 
+			 <input id="degree" type="checkbox" name="HSC" value=""> HSC
+			 <input id="degree" type="checkbox" name="BSc" value=""> BSc
+     		</td>
+     	</tr>
+
+     	<tr>
+     		<td>Photo</td>
+     		<td><input type="file" name="cv"></td>
+     	</tr>
+
+     	<tr >
+     		<td colspan="2" align="right">
+     		<input onclick="validation()" type="submit" name="btn1" value="submit">
+     		<input type="Reset" name="btn2" value="reset">
+     	</td>
+     	</tr>
+     	
+     </table>
+
+     <script>
+		"use strict"
+
+		
+
+		function getName(){
+			let name = document.getElementById('name').value;
+
+			if(name != ''){
+				// alert('done');
+			}else{
+				alert('Enter Your Name');
+			}
+		}
+
+
+		function getEmail(){
+			let email = document.getElementById('email').value;
+
+			if(email != ''){
+				// alert('done');
+			}else{
+				alert('Enter Your Email');
+			}
+		}
+
+		function getGender(){
+			let gender = document.getElementById('gender').value;
+
+			if(gender != ''){
+				// alert('done');
+			}else{
+				alert('Select your Gender');
+			}
+		}
+
+		function getDegree(){
+
+			let degree = document.getElementById('degree').value;
+
+			if(degree != ''){
+				// alert('done');
+			}else{
+				alert('Select Your Degree');
+			}
+		}
+
+
+		function getDOB(){
+			let dob = document.getElementById('dob').value;
+
+			if(dob != ''){
+				// alert('done');
+			}else{
+				alert('Enter your Date of Birth');
+			}
+		}
+
+		function getBG(){
+			let bg = document.getElementById('bg').value;
+
+			if(bg != ''){
+				// alert('done');
+			}else{
+				alert('select Your Bloodgroup');
+			}
+		}
+
+		function getProfilepic(){
+			let pf = document.getElementById('pf').value;
+
+			if(pf != ''){
+				alert('done');
+			}else{
+				alert('Photo missing');
+			}
+		}
+
+		function validation(){
+			getName();
+			getEmail();
+			getGender();
+			getDegree();
+			getDOB();
+			getBG();
+			getProfilepic();
+		}
+
+	
+
+
+	</script>
+
+
+</body>
+</html>
